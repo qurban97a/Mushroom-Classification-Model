@@ -70,6 +70,7 @@ model <- h2o.automl(
   validation_frame  = test,
   leaderboard_frame = test,
   stopping_metric = "AUC",
+  balance_classes = T,
   seed = 123,
   nfolds=10,
   max_runtime_secs =360)
